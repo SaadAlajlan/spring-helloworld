@@ -13,6 +13,9 @@ public class Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
+		app.setDefaultProperties(Collections
+          .singletonMap("server.port", "5000"));
+        app.run(args);
 	}
 
 	@Bean
