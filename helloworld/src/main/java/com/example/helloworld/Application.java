@@ -12,8 +12,8 @@ import org.springframework.context.annotation.Bean;
 public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-		app.setDefaultProperties(Collections
+ 		SpringApplication app = new SpringApplication(CustomApplication.class);
+        app.setDefaultProperties(Collections
           .singletonMap("server.port", "5000"));
         app.run(args);
 	}
